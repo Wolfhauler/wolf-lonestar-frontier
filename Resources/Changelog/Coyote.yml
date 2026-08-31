@@ -3237,3 +3237,113 @@ Entries:
   id: 364
   time: '2026-08-25T15:31:45.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/67
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        Bulk fuel crates at cargo have been replaced with 'compressed' fuel
+        rods, which can be bought for for the same effect at any fuel vend.
+  id: 365
+  time: '2026-08-26T11:12:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/69
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Previously setup freelancer loadouts should no longer be missing their
+        jumpsuits.
+  id: 366
+  time: '2026-08-26T11:18:12.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/68
+- author: Waterwithoutanyice
+  changes:
+    - type: Tweak
+      message: Re-enabled choral hydrate, pax, and nocturine
+  id: 367
+  time: '2026-08-26T17:03:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/65
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        you can now purchase 2 new shuttles, Aegis from the expedition shipyard,
+        And Dragoon from the regular shipyard.
+  id: 368
+  time: '2026-08-26T22:44:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/72
+- author: Synthestra
+  changes:
+    - type: Tweak
+      message: >-
+        The Plant Analyzer now displays localized names. no more "JuiceTomato".
+        you'll see "tomato juice" instead
+  id: 369
+  time: '2026-08-26T23:04:32.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/76
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        the wording of the confrontation beacon when toggled off has been
+        tweaked slightly to reflect rules better.
+  id: 370
+  time: '2026-08-27T00:21:42.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/77
+- author: archee1
+  changes:
+    - type: Add
+      message: added 3 kimonos from TG, named 'pressed kimono' in red green and white.
+    - type: Add
+      message: >-
+        added alternate performer outfit (its red, you can figure out who it
+        is).
+    - type: Add
+      message: added pink variant of the regal gown and suit.
+    - type: Tweak
+      message: >-
+        the pirate garb coat and black and gold dress have had their sprites
+        updated.
+  id: 371
+  time: '2026-08-30T06:07:57.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/89
+- author: DoubleHypercube
+  changes:
+    - type: Fix
+      message: Anthromorphs now properly have animal stomachs
+  id: 372
+  time: '2026-08-30T06:11:22.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/86
+- author: Synthestra
+  changes:
+    - type: Add
+      message: Mirrors are now constructable, with steel and silver
+  id: 373
+  time: '2026-08-30T17:05:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/88
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        You can now quick equip from the internals slot and pockets.](add: Adds
+        smart equip function to pocket 1, pocket 2, and suit storage slots.
+        Default binds are Shift+F and Shift+G for first and second pocket,
+        Shift+H for suit storage.)
+  id: 374
+  time: '2026-08-30T22:41:11.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/90
+- author: DoubleHypercube
+  changes:
+    - type: Add
+      message: The ClothesMate now has access to some more (existing) clothes.
+    - type: Remove
+      message: Removed CentComm bunnysuits.
+  id: 375
+  time: '2026-08-30T22:43:19.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/78
+- author: archee1
+  changes:
+    - type: Fix
+      message: Bulk fuels now properly look bulky.
+  id: 376
+  time: '2026-08-31T03:01:24.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/92
