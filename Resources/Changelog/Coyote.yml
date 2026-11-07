@@ -4602,3 +4602,82 @@ Entries:
   id: 504
   time: '2026-10-31T12:16:05.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/293
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Portable Recharger now wearable in suitstorage
+  id: 505
+  time: '2026-11-02T20:33:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/296
+- author: archee1
+  changes:
+    - type: Remove
+      message: Removed titan thrusters.
+    - type: Tweak
+      message: Vesper thrusters now take 3 capacitors, down from 6
+  id: 506
+  time: '2026-11-02T20:57:03.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/292
+- author: Sushiburger
+  changes:
+    - type: Tweak
+      message: Ballet Heels tweak
+  id: 507
+  time: '2026-11-02T20:57:53.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/297
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: Port of Bubber's armored cnc maid outfit.
+  id: 508
+  time: '2026-11-02T21:01:05.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/298
+- author: archee1
+  changes:
+    - type: Add
+      message: Adds 2 staff plushies of Archee and Eveningkind
+  id: 509
+  time: '2026-11-05T07:20:24.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/300
+- author: Sushiburger
+  changes:
+    - type: Add
+      message: 'New item: HCD'
+  id: 510
+  time: '2026-11-05T07:22:04.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/286
+- author: tenmillimaster
+  changes:
+    - type: Add
+      message: >-
+        Added Laser/Holoflare pistol as an upgrade to the laser pistol/
+        holoflare.
+  id: 511
+  time: '2026-11-05T15:26:09.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/262
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        2 new colors can be selected among the regular set of colorable clothing
+        options
+    - type: Tweak
+      message: The regular colors set has been re-ordered to be more hue ordered
+    - type: Tweak
+      message: >-
+        All base game 'jester' costume related clothing has been made colorable
+        (2 suits, 2 hats, shoes)
+    - type: Tweak
+      message: Jester shoes now have visible bells on them
+    - type: Tweak
+      message: >-
+        The following now support colorability: Evending Dress (red and blue),
+        Athletic shorts (no longer a loadout option (for now)), Comfy sweater
+    - type: Tweak
+      message: >-
+        Base jumpsuits, casual jumpsuits, and shoes (including skirt
+        alternatives) are now colorable, and are no longer offered by the
+        clothesmate aside their default grey/white variants.
+  id: 512
+  time: '2026-11-06T09:14:11.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/304
