@@ -1,20 +1,45 @@
 #region colorable
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColorInhand ]
   id: ClothingUniformTurtleskirtColorable
   name: turtleneck jumpskirt
   description: For some reason, wearing this makes you feel like working in tech support at a product store.
   components:
   - type: Sprite
-    sprite: _DEN/Clothing/Uniforms/Jumpskirt/whiteturtleskirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    layers: # TODO: add support for sprite+clothing mappings to keep layers sync'd and revert this to icons.
+    - state: equipped-INNERCLOTHING-color
+      map: [ "uniform-equipped" ]
+    - state: equipped-INNERCLOTHING
+      map: [ "uniform-equipped-skirt" ]
   - type: Clothing
-    sprite: _DEN/Clothing/Uniforms/Jumpskirt/whiteturtleskirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/color_turtle.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-color
+        map: [ "uniform-equipped" ]
+      - state: equipped-INNERCLOTHING
+        map: [ "uniform-equipped-skirt" ]
+  - type: ColorableClothing
+    available:
+      - uniform-icon:
+          icon-color: Base
+        uniform-equipped-skirt:
+          equipped-INNERCLOTHING: ""
+          equipped-INNERCLOTHING-long: ""
+          equipped-INNERCLOTHING-pencil: ""
+          equipped-INNERCLOTHING-poofy: ""
+        uniform-equipped:
+          equipped-INNERCLOTHING-color: Base
+        hl-color:
+          inhand-left-color: Base
+        hr-color:
+          inhand-right-color: Base
 
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtTailoredGownColorable
   name: tailored gown
-  suffix: Random
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
@@ -39,36 +64,35 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        decor: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Secondary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: decor
+          equipped-INNERCLOTHING-decor: Secondary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: decor
+          icon-decor: Secondary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
   parent: ClothingUniformJumpskirtTailoredGownColorable
   id: ClothingUniformJumpskirtTailoredGownMonoColorable
   name: tailored gown (simple)
-  suffix: Random
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/tailored-gown.rsi
@@ -93,32 +117,32 @@
         map: [ "accent" ]
       - state: equipped-INNERCLOTHING-extra
         map: [ "extra" ]
-  - type: RandomSprite
+  - type: ColorableClothing
     denyReroll: false
     mappedColors:
-        base: NTInteriorDesign
-        accent: NTInteriorDesign
-        extra: TechniColors
+        Silks: LSSilks
+        Primary: NTInteriorDesign
+        Gems: TechniColors
     available:
       - base:
-          equipped-INNERCLOTHING-base: base
+          equipped-INNERCLOTHING-base: Primary
         decor:
-          equipped-INNERCLOTHING-decor: base
+          equipped-INNERCLOTHING-decor: Primary
         accent:
-          equipped-INNERCLOTHING-accent: accent
+          equipped-INNERCLOTHING-accent: Silks
         extra:
-          equipped-INNERCLOTHING-extra: extra
+          equipped-INNERCLOTHING-extra: Gems
         icon-base:
-          icon-base: base
+          icon-base: Primary
         icon-decor:
-          icon-decor: base
+          icon-decor: Primary
         icon-accent:
-          icon-accent: accent
+          icon-accent: Silks
         icon-extra:
-          icon-extra: extra
+          icon-extra: Gems
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteMono ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableMono ]
   id: ClothingUniformJumpskirtStraplessColorable
   name: strapless dress
   description: A light flowing dress made of a breathable fabric.
@@ -129,7 +153,7 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/strapless.rsi
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtPartyPrincessColorable
   name: party-princess dress
   description: #TODO
@@ -138,12 +162,12 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/party-princess.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: Rainbow
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtCheckerColorable
   name: checker dress
   description: #TODO
@@ -152,12 +176,12 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/checker-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtSpottyColorable
   name: spotty dress
   description: #TODO
@@ -166,12 +190,12 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/spotty-dress.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
 - type: entity
-  parent: [ ClothingUniformSkirtBase, ClothingUniformRandomSpriteBaseColor ]
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpskirtWesternColorable
   name: saloon dress
   description: #TODO
@@ -180,432 +204,183 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/western.rsi
-  - type: RandomSprite
+  - type: ColorableClothing
     mappedColors:
       Base: NTInteriorDesign
 
-# region School skirts
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtSchool
-  name: school skirt (blue)
-  description: Stylish and comfortable school skirt.
+  id: ClothingUniformEveDressBlue
+  name: evening dress
+  description: a stunning dress for formal occasions.
   components:
   - type: Sprite
-    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/schoolskirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/evening-dress.rsi
     layers:
-    - state: icon
-    - state: icon-detail
-      color: "#96bbe5"
-    - state: icon-accent
-      color: "#A93A1C"
+    - state: equipped-INNERCLOTHING
+      color: "#3861e8"
+      map: [ "uniform-equipped" ]
   - type: Clothing
-    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/schoolskirt.rsi
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/evening-dress.rsi
     clothingVisuals:
       jumpsuit:
       - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#96bbe5"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#A93A1C"
-  - type: Item
-    sprite: _Starlight/Clothing/Uniforms/Jumpskirt/schoolskirt.rsi
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          color: "#96bbe5"
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          color: "#96bbe5"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolOrange
-  name: school skirt (nectarine)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#ff9100"
-    - state: icon-accent
-      color: "#6567ff"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ff9100"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#6567ff"
-      jumpsuit-monkey:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ff9100"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#6567ff"
+        color: "#3861e8"
+        map: [ "uniform-equipped" ]
   - type: Item
     inhandVisuals:
       left:
         - state: inhand-left
-        - state: inhand-left-detail
-          color: "#ff9100"
+          color: "#3861e8"
+          map: [ "hl-base" ]
       right:
         - state: inhand-right
-        - state: inhand-right-detail
-          color: "#ff9100"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolRed
-  name: school skirt (strawberry)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#9E2020"
-    - state: icon-accent
-      color: "#5C9630"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#9E2020"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#5C9630"
-      jumpsuit-monkey:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#9E2020"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#5C9630"
-  - type: Item
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          color: "#9E2020"
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          color: "#9E2020"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolWhite
-  name: school skirt (ghost white)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#eff9ff"
-    - state: icon-accent
-      color: "#94d1c1"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#eff9ff"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#94d1c1"
-      jumpsuit-monkey:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#eff9ff"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#94d1c1"
-  - type: Item
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          color: "#eff9ff"
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          color: "#eff9ff"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolBlack
-  name: school skirt (licorice)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#353535"
-    - state: icon-accent
-      color: "#ff0000"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#353535"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#ff0000"
-      jumpsuit-monkey:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#353535"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#ff0000"
-  - type: Item
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          color: "#353535"
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          color: "#353535"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolPink
-  name: school skirt (lavender)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#ff8ef9"
-    - state: icon-accent
-      color: "#8000ff"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ff8ef9"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#8000ff"
-      jumpsuit-monkey:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ff8ef9"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#8000ff"
-  - type: Item
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          color: "#ff8ef9"
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          color: "#ff8ef9"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolGreen
-  name: school skirt (jade)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#49ff95"
-    - state: icon-accent
-      color: "#0062ff"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#49ff95"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#0062ff"
-      jumpsuit-monkey:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#49ff95"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#0062ff"
-  - type: Item
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          color: "#49ff95"
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          color: "#49ff95"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolYellow
-  name: school skirt (lemon)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#fffb00"
-    - state: icon-accent
-      color: "#555555"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#fffb00"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#555555"
-      jumpsuit-monkey:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#fffb00"
-      - state: equipped-INNERCLOTHING-accent
-        color: "#555555"
-  - type: Item
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          color: "#fffb00"
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          color: "#fffb00"
-
-- type: entity
-  parent: ClothingUniformJumpskirtSchool
-  id: ClothingUniformJumpskirtSchoolColorable
-  name: school skirt (random)
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      map: [ "i-detail" ]
-    - state: icon-accent
-      map: [ "i-accent" ]
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        map: [ "e-detail" ]
-      - state: equipped-INNERCLOTHING-accent
-        map: [ "e-accent" ]
-  - type: Item
-    inhandVisuals:
-      left:
-        - state: inhand-left
-        - state: inhand-left-detail
-          map: [ "hl-detail" ]
-      right:
-        - state: inhand-right
-        - state: inhand-right-detail
-          map: [ "hr-detail" ]
-  - type: RandomSprite
-    denyReroll: false
-    mappedColors:
-      detail: NTInteriorDesign
-      accent: NTInteriorDesign
+          color: "#3861e8"
+          map: [ "hr-base" ]
+  - type: ColorableClothing
+    randomOnCreation: false
     available:
-      - i-detail:
-          icon-detail: detail
-        i-accent:
-          icon-accent: accent
-        e-detail:
-          equipped-INNERCLOTHING-detail: detail
-        e-accent:
-          equipped-INNERCLOTHING-accent: accent
-        hl-detail:
-          inhand-left-detail: detail
-        hr-detail:
-          inhand-right-detail: detail
+      - uniform-equipped:
+          equipped-INNERCLOTHING: Base
+          equipped-INNERCLOTHING-alt: Base
+        hl-base:
+          inhand-left: Base
+        hr-base:
+          inhand-right: Base
+    mappedColors:
+      Base: NTInteriorDesign
+
+- type: entity
+  parent: ClothingUniformEveDressBlue
+  id: ClothingUniformEveDressRed
+  components:
+  - type: Sprite
+    layers:
+    - state: equipped-INNERCLOTHING-alt
+      color: "#9E2020"
+      map: [ "uniform-equipped" ]
+  - type: Clothing
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-alt
+        color: "#9E2020"
+        map: [ "uniform-equipped" ]
+  - type: Item
+    inhandVisuals:
+      left:
+        - state: inhand-left
+          color: "#9E2020"
+          map: [ "hl-base" ]
+      right:
+        - state: inhand-right
+          color: "#9E2020"
+          map: [ "hr-base" ]
+
+- type: entity
+  parent: ClothingUniformJumpskirtCasualBlue
+  id: ClothingUniformJumpskirtCasualWhite
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/casual.rsi
+    layers:
+    - state: icon-jumpskirt
+    - state: icon-shirt
+      color: "#ffffff"
+      map: [ "uniform-icon" ]
+  - type: ColorableClothing
+    randomOnCreation: true
+
+- type: entity
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseDualColor ]
+  id: ClothingUniformJumpskirtPlaidDress
+  name: plaid "pencil" style skirt
+  description: Coffee stains not included.
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/dress-plaid.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/dress-plaid.rsi
+
+- type: entity
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableDualColor ]
+  id: ClothingUniformJumpskirtCardiganDress
+  name: cardigan dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/dress-cardigan.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/dress-cardigan.rsi
+
+
+- type: entity
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableDualColor ]
+  id: ClothingUniformJumpskirtOveralls
+  name: overalls jumpskirt
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/overalls.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/overalls.rsi
+  - type: ColorableClothing
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtWeddingDressBow
+  name: wedding dress bow
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/wedding-dress.rsi
+    layers:
+    - state: equipped-INNERCLOTHING-primary
+      map: [ "uniform-equipped-primary" ]
+    - state: mask_null
+      map: [ "uniform-equipped-secondary" ]
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/wedding-dress.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING-primary
+        map: [ "uniform-equipped-primary" ]
+      - state: mask_null
+        map: [ "uniform-equipped-secondary" ]
+  - type: ColorableClothing
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
+    available:
+      - uniform-equipped-primary:
+          equipped-INNERCLOTHING-primary: Primary
+        uniform-equipped-secondary:
+          equipped-INNERCLOTHING-secondary: Secondary
+          mask_null: ""
+
+- type: entity
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableDualColor ]
+  id: ClothingUniformJumpskirtPrimalDress
+  name: primal dress
+  components:
+  - type: Sprite
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/dress-primal.rsi
+  - type: Clothing
+    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/dress-primal.rsi
+  - type: ColorableClothing
+    mappedColors:
+      Primary: NTInteriorDesign
+      Secondary: NTInteriorDesign
 
 # region Regal Gown
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, ClothingUniformColorableBaseColor ]
   id: ClothingUniformJumpsuitRegalGown
-  name: blue regal gown
+  name: regal gown
   components:
   - type: Sprite
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
   - type: Clothing
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/regal-gown.rsi
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownRed
-  name: red regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#96526f"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#96526f"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownGreen
-  name: green regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#56a452"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#56a452"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownBlack
-  name: black regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#5c5c60"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#5c5c60"
-
-- type: entity
-  parent: ClothingUniformJumpsuitRegalGown
-  id: ClothingUniformJumpsuitRegalGownPink
-  name: pink regal gown
-  components:
-  - type: Sprite
-    layers:
-    - state: icon
-    - state: icon-detail
-      color: "#ffaae1"
-  - type: Clothing
-    clothingVisuals:
-      jumpsuit:
-      - state: equipped-INNERCLOTHING
-      - state: equipped-INNERCLOTHING-detail
-        color: "#ffaae1"
 
 # region Kimonos
 - type: entity
@@ -639,16 +414,6 @@
     sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/kimono-white.rsi
 
 # region Misc
-- type: entity
-  parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtMaidDressLong
-  name: long maid dress
-  components:
-  - type: Sprite
-    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
-  - type: Clothing
-    sprite: _LoneStar/Clothing/Uniforms/Jumpskirt/maid-dresslong.rsi
-
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtPerformerAlt
