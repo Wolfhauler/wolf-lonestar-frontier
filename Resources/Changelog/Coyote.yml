@@ -4812,3 +4812,225 @@ Entries:
   id: 523
   time: '2026-11-12T17:43:59.0000000+00:00'
   url: https://github.com/LoneStarSS14/lonestar-frontier/pull/322
+- author: archee1
+  changes:
+    - type: Fix
+      message: Expedition enemies no longer give epic tier drops 2/3.
+  id: 524
+  time: '2026-11-15T19:07:16.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/326
+- author: archee1
+  changes:
+    - type: Tweak
+      message: >-
+        Coin trees now die after a day and spawn their coins in higher
+        denominations less frequently.
+  id: 525
+  time: '2026-11-22T15:50:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/331
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Some Nash QOL and tweaks
+  id: 526
+  time: '2026-11-23T01:08:07.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/329
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Cryosleep pod room on the caladrius is now a half-finished cloning room.
+    - type: Remove
+      message: Removed cryosleep pods from shuttles.
+  id: 527
+  time: '2026-11-23T05:46:26.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/333
+- author: archee1
+  changes:
+    - type: Add
+      message: New freelancer command position "Master At Arms"
+    - type: Add
+      message: >-
+        New LSRD job, RO (retrieval officer) that functions similar to smugglers
+        in that they collect items for FUC converting.
+    - type: Add
+      message: >-
+        New LSRD non-combat job; Clerk, it is the counterpart to escorts in that
+        they have no in-round responsibility aside being considered 'a member'
+        of the faction.
+    - type: Tweak
+      message: >-
+        A lot of LSRD's jobs have been merged into 'Enforcer' or into Chief
+        ranger.
+    - type: Tweak
+      message: >-
+        Escort has been split into 2 jobs, Spy, and Escort, with spy being a
+        counterpart to detectives.
+    - type: Tweak
+      message: Den and LSRDO are now equally 3.5-4.5km away from nash each shift.
+    - type: Tweak
+      message: Both faction's medical roles now take medical nurse time to play.
+    - type: Tweak
+      message: >-
+        LSRD and Freelancers now have full loadout selection alike other roles
+        (merc specific items are limited to the combat inclined roles)
+    - type: Tweak
+      message: >-
+        Chief ranger is no longer a whitelisted role and will require 100h of
+        LSRD factional time, and 40 hours of enforcer.
+    - type: Tweak
+      message: SR, Secretaries, and Nash-Sec now start with freelancer comms
+    - type: Fix
+      message: Sheleg are now forced to spawn with EVA on as the guild leader
+  id: 528
+  time: '2026-11-23T22:10:01.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/285
+- author: Wolfhauler
+  changes:
+    - type: Fix
+      message: Vulp Advanced Engi helm fix
+  id: 529
+  time: '2026-11-23T22:12:55.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/335
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        All Door related entities now correctly the entirety of their intended
+        animation.
+  id: 530
+  time: '2026-11-25T04:11:46.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/336
+- author: archee1
+  changes:
+    - type: Add
+      message: >-
+        New Hardened light fixtures can be used in mapping, which are solar
+        flare immune, these are not craftable by players, use shielded lights.
+    - type: Add
+      message: Shielded Strobe lights can now be built.
+    - type: Tweak
+      message: Always powered lights can now have their lightbulbs swapped out.
+    - type: Tweak
+      message: >-
+        Every variant of light fixture prefilled with a bulb can be found in the
+        entity spawn menu.
+    - type: Tweak
+      message: Always powered lights are now named self-powered to differentiate them.
+  id: 531
+  time: '2026-11-25T04:14:15.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/324
+- author: archee1
+  changes:
+    - type: Remove
+      message: >-
+        Reverts the previous door changes due to more issues being discovered
+        prior to the fix
+  id: 532
+  time: '2026-11-25T20:42:20.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/337
+- author: archee1
+  changes:
+    - type: Add
+      message: New shuttle; LSR-Dragoon, medium expedition shuttle.
+    - type: Add
+      message: New shuttle; FLG-Drake, medium expedition shuttle.
+    - type: Tweak
+      message: Renamed Dragoon -> Whelp.
+    - type: Add
+      message: New shuttle; FLG-Nickel, micro pursuit shuttle.
+    - type: Add
+      message: New shuttle; FLG-Pathos, small medical shuttle.
+    - type: Remove
+      message: FLG-Bonesaw.
+    - type: Remove
+      message: >-
+        Removed the following shuttles from shipyards: LSR-Wasp, LSR-Empress,
+        LSR-Prowler, Khonsu, Araneo, Solifuge, Xiphos, Hephaestus, Longshoreman.
+    - type: Tweak
+      message: the Dove and Raven are now priced at 225k and 195k.
+    - type: Tweak
+      message: FLG-Turncoat, Exped capability, now domains into cargo.
+    - type: Tweak
+      message: LSR-Malinois, Exped capability.
+    - type: Add
+      message: New shuttle; LSR-Garrison, medium expedition shuttle.
+    - type: Tweak
+      message: >-
+        For shuttles, LL4 and up mean that it requires command access to
+        purchase
+    - type: Tweak
+      message: Anchor/Yegerov/Gourd/Ambition are now LL4
+    - type: Tweak
+      message: Crescent is now LL5, and costs 2.25mil down from 8mil
+    - type: Tweak
+      message: All LSRD shuttles are now purchasable by any member of the LSRD
+    - type: Add
+      message: There is now a regular medical shipyard console at the den.
+    - type: Add
+      message: Freelancer's ships are no longer defaulted to 'disguise' names
+  id: 533
+  time: '2026-11-26T01:24:31.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/338
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        Corrects LSRD jobs to not be whitelists and take their temporary
+        requirement of 16h server playtime.
+  id: 534
+  time: '2026-11-26T03:49:35.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/339
+- author: archee1
+  changes:
+    - type: Fix
+      message: >-
+        LSRD/Freelancer roles should now have the correct options from their
+        loadouts.
+  id: 535
+  time: '2026-11-26T21:49:43.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/340
+- author: archee1
+  changes:
+    - type: Fix
+      message: Factional Residents cant set pseudonyms from their loadouts.
+    - type: Fix
+      message: LSRD's RO no longer get DB from RPI
+    - type: Fix
+      message: Migrates whitelists from old freelancer job IDs to the new IDs.
+    - type: Tweak
+      message: >-
+        LSRD and Freelancer roles now have their accesses visible at the ID
+        computer.
+    - type: Fix
+      message: SR now has Pirate and BlackMarket access.
+    - type: Fix
+      message: Loadouts for LSRD and Freelancers are now all correctly available.
+    - type: Tweak
+      message: >-
+        You can now swap the active ID Card in ID computers without ejected the
+        current one.
+    - type: Fix
+      message: >-
+        CR and MAA now spawn with seal-editing pens (cybersun/centcomm) for
+        document related matters.
+  id: 536
+  time: '2026-11-26T22:19:58.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/341
+- author: archee1
+  changes:
+    - type: Add
+      message: 10 new colorable dresses.
+    - type: Tweak
+      message: >-
+        3 pre-existing dress items made colorable, Elegant, Turtleneck, Striped
+        dresses.
+  id: 537
+  time: '2026-11-27T05:26:47.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/343
+- author: archee1
+  changes:
+    - type: Tweak
+      message: Fixes some small mistakes on the malinois/drake/dragoon/pathos
+  id: 538
+  time: '2026-11-27T06:01:23.0000000+00:00'
+  url: https://github.com/LoneStarSS14/lonestar-frontier/pull/342

@@ -1,4 +1,5 @@
 - type: vessel
+  abstract: true # LoneStar
   id: Wasp
   parent: BaseVessel
   name: NSF Wasp
@@ -6,7 +7,7 @@
   price: 135000
   category: Large
   group: Security
-  access: Sergeant
+  access: LsrdShipyard # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/wasp.yml
   guidebookPage: Null
   class:
@@ -17,6 +18,7 @@
   - AME
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Wasp
   mapName: 'NSF Wasp'
   mapPath: /Maps/_NF/Shuttles/Nfsd/wasp.yml
@@ -30,6 +32,6 @@
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            Prisoner: [ 0, 0 ]
+        - type: StationJobs
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ] # LoneStar

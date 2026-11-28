@@ -1,4 +1,5 @@
 - type: vessel
+  abstract: true # LoneStar
   id: Rogue
   parent: BaseVessel
   name: NSF Rogue
@@ -6,7 +7,7 @@
   price: 12200 #the appraisal is 9100$
   category: Micro
   group: Custom
-  access: Security
+  access: LsrdShipyard # LoneStar
   mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/rogue.yml
   guidebookPage: Null
@@ -16,6 +17,7 @@
   - APU
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Rogue
   mapName: 'NSF Rogue'
   mapPath: /Maps/_NF/Shuttles/Nfsd/rogue.yml
@@ -30,4 +32,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ] # LoneStar

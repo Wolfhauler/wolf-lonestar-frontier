@@ -8,6 +8,7 @@
 
 # Shuttle Notes:
 - type: vessel
+  abstract: true # LoneStar
   id: Turncoat
   parent: BaseVesselAntag
   name: Turncoat
@@ -24,6 +25,7 @@
   - Uranium
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Turncoat
   mapName: 'Turncoat'
   mapPath: /Maps/_NF/Shuttles/BlackMarket/turncoat.yml
@@ -33,11 +35,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Brigand {1}'
+          mapNameTemplate: 'Turncoat {1}' # LoneStar
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            NFPirate: [ 0, 0 ]
-#            Escort: [ 0, 0 ]
+        - type: StationJobs # LoneStar
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

@@ -7,8 +7,9 @@
 # Discord: Tych0
 
 # Shuttle Notes:
-# Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing. 
+# Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing.
 - type: vessel
+  abstract: true # LoneStar
   id: Heimdall
   name: NSF Heimdall
   parent: BaseVessel
@@ -16,7 +17,7 @@
   price: 27000 # Approx 20% markup applied to the appraisal price of 22500 due to the presence of advanced radar.
   category: Small
   group: Security
-  access: Detective
+  access: LsrdShipyard # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
   guidebookPage: Null
   class:
@@ -25,6 +26,7 @@
   - Plasma
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Heimdall
   mapName: 'NSF Heimdall'
   mapPath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
@@ -39,4 +41,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ] # LoneStar

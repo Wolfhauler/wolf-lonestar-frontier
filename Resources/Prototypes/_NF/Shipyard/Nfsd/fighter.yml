@@ -1,4 +1,5 @@
 - type: vessel
+  abstract: true # LoneStar
   id: Fighter
   parent: BaseVessel
   name: NSF Fighter
@@ -6,7 +7,7 @@
   price: 9000 #not sure how much mark up % to add but the appraisal is 7150$ now
   category: Micro
   group: Custom
-  access: Security
+  access: LsrdShipyard # LoneStar
   mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/fighter.yml
   guidebookPage: Null
@@ -16,6 +17,7 @@
   - APU
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Fighter
   mapName: 'NSF Fighter'
   mapPath: /Maps/_NF/Shuttles/Nfsd/fighter.yml
@@ -30,4 +32,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ] # LoneStar

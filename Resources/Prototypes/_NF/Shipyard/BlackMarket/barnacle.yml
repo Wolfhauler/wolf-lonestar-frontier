@@ -4,6 +4,7 @@
 # Shuttle Notes:
 # a wooden pirate version of the classic Prospector
 - type: vessel
+  abstract: true # LoneStar
   id: Barnacle
   parent: BaseVesselAntag
   name: Barnacle
@@ -20,6 +21,7 @@
   - Plasma
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Barnacle
   mapName: 'Barnacle'
   mapPath: /Maps/_NF/Shuttles/BlackMarket/barnacle.yml
@@ -29,11 +31,10 @@
       stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Prospector {1}' # Fake name eh?
+          mapNameTemplate: 'Barnacle {1}' # LoneStar
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-#        - type: StationJobs
-#          availableJobs:
-#            NFPirate: [ 0, 0 ]
-#            Escort: [ 0, 0 ]
+        - type: StationJobs # LoneStar
+          availableJobs:
+            InterviewLSEscort: [ 0, 0 ]

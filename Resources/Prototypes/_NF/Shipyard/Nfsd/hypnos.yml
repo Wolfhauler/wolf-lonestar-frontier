@@ -9,6 +9,7 @@
 # Shuttle Notes:
 #
 - type: vessel
+  abstract: true # LoneStar
   id: Hypnos
   parent: BaseVessel
   name: NSF Hypnos
@@ -16,7 +17,7 @@
   price: 34500
   category: Medium
   group: Security
-  access: Sergeant
+  access: LsrdShipyard # LoneStar
   shuttlePath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
   class:
   - Pursuit
@@ -24,6 +25,7 @@
   - Uranium
 
 - type: gameMap
+  abstract: true # LoneStar
   id: Hypnos
   mapName: 'NSF Hypnos'
   mapPath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
@@ -38,4 +40,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: {}
+          availableJobs:
+            InterviewLSClerk: [ 0, 0 ] # LoneStar
